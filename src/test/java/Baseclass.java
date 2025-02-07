@@ -35,19 +35,19 @@ public class Baseclass {
 
 
          driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), (Capabilities) options);
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
     public void longPressAction(WebElement ele)
     {
         ( (JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
-               "elementId", ((RemoteWebElement) ele).getId(),"duration",3000));
+               "elementId", ((RemoteWebElement) ele).getId(),"duration",4000));
     }
    public void swipeAction(WebElement ele,String direction)
     {
       ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
               "elementId", ((RemoteWebElement)ele).getId(),
              "direction", direction,
-               "percent", 0.3
+               "percent", 0.4
 
         ));
     }
@@ -57,9 +57,9 @@ public class Baseclass {
 
     public static Double getFormattedAmount(String amount) throws NumberFormatException
     {
-     Double price= parseDouble(amount.substring(1));
-        price = price;
-        return price;
+     Double price1= parseDouble(amount.substring(1));
+        price1 = price1;
+        return price1;
    }
     @AfterClass
     void teardown()
