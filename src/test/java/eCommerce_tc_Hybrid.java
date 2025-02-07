@@ -62,6 +62,7 @@ public class eCommerce_tc_Hybrid extends Baseclass {
         for (String contextName : contexts)
         {
             System.out.println(contextName);
+
         }
         driver.context("WEBVIEW_com.androidsample.generalstore");
         driver.findElement(By.name("q")).sendKeys("rahul shetty academy");

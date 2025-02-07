@@ -35,12 +35,12 @@ public class Baseclass {
 
 
          driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), (Capabilities) options);
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
     public void longPressAction(WebElement ele)
     {
         ( (JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
-               "elementId", ((RemoteWebElement) ele).getId(),"duration",2000));
+               "elementId", ((RemoteWebElement) ele).getId(),"duration",3000));
     }
    public void swipeAction(WebElement ele,String direction)
     {
