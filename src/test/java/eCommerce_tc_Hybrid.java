@@ -71,6 +71,10 @@ public class eCommerce_tc_Hybrid extends Baseclass {
         driver.context("NATIVE_APP");
 
     }
+
+    private Double getFormattedAmount(String amountString) {
+        return null;
     }
+}
 
 
